@@ -21,15 +21,13 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
 
         binding. tvRegister.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
         }
         binding.btnlogin.setOnClickListener {
             validateSignUp()
         }
     }
-
-
     fun validateSignUp() {
         val firstName = binding.etusername.text.toString()
         val lastName = binding.etPhoneNumber.text.toString()
